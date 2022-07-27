@@ -18,8 +18,10 @@ class EofficeController extends Controller
         $pegawai = pegawai::count();
         $departemen = departemen::count();
         $dir = direktorat::count();
+        $devisi = Devisi::count();
+        $seksi = Seksi::count();
 
-        return view('content.dashboard', ['pegawai' => $pegawai,'departemen' => $departemen, 'dir' => $dir]);
+        return view('content.dashboard', ['pegawai' => $pegawai,'departemen' => $departemen, 'dir' => $dir, 'seksi' => $seksi, 'devisi' => $devisi]);
     }
 
 
@@ -520,9 +522,9 @@ class EofficeController extends Controller
     }
 
     public function getdepartemen($id){
-        $devisi= departemen::all()->where("devisi_id", $id)->pluck("nama_departemen", "id");
+        $departemen= departemen::all()->where("devisi_id", $id)->pluck("nama_departemen", "id");
 
-        return json_encode($devisi);
+        return json_encode($departemen);
     }
 
     public function getseksi($id){

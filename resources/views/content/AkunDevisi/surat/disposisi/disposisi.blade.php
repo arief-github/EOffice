@@ -1,4 +1,4 @@
-@extends('template.index')
+@extends('template.template_devisi.index')
 
 @section('content')
 
@@ -6,7 +6,7 @@
     <div class="col p-md-0">
         <ol class="breadcrumb">
             <li class="breadcrumb-item">Surat</li>
-            <li class="breadcrumb-item active">Surat Masuk</li>
+            <li class="breadcrumb-item active">Disposisi</li>
         </ol>
     </div>
 </div>
@@ -17,8 +17,7 @@
             <div class="card">
                 <div class="card-body">
                     <div class="card-title">
-                        <h4>Surat Masuk</h4>
-                        <a class="btn btn-primary btn-sm" href="{{route('form_masuk_direktur')}}" role="button">+ Surat</a>
+                        <h4>Disposisi</h4>
                     </div>
                     <div class="table-responsive">
                         <table class="table table-striped table-bordered zero-configuration">
@@ -27,6 +26,7 @@
                                     <th class="text-center">#</th>
                                     <th class="text-center">Nomor Surat</th>
                                     <th class="text-center">Pengirim</th>
+                                    <th class="text-center">Penerima</th>
                                     <th class="text-center">Perihal</th>
                                     <th class="text-center">Tanggal Surat</th>
                                     <th class="text-center">Tanggal Masuk</th>
@@ -40,6 +40,7 @@
                                     <td class="text-center"></td>
                                     <td></td>
                                     <td></td>
+                                    <td class="text-center"></td>
                                     <td class="text-center"></td>
                                     <td class="text-center"></td>
                                     <td class="text-center"></td>
